@@ -1,59 +1,133 @@
-# CrudAngularMaterial
+# 📋 Formulário de Cadastro — Angular Material
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+Aplicação web de **cadastro com operações CRUD** construída com Angular 19 e Angular Material. Permite criar, listar, editar e remover registros por meio de um formulário com campos mascarados e identificadores únicos gerados no frontend.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias
+
+| Tecnologia | Versão | Função |
+|---|---|---|
+| [Angular](https://angular.dev) | 19 | Framework principal |
+| [Angular Material](https://material.angular.io) | 19 | Componentes de UI (tema Indigo/Pink) |
+| [Angular CDK](https://material.angular.io/cdk) | 19 | Utilitários de layout e acessibilidade |
+| [Angular Flex Layout](https://github.com/angular/flex-layout) | 15 beta | Responsividade |
+| [ngx-mask](https://www.npmjs.com/package/ngx-mask) | 19 | Máscaras de input (CPF, telefone, etc.) |
+| [uuid](https://www.npmjs.com/package/uuid) | 11 | Geração de IDs únicos |
+| [RxJS](https://rxjs.dev) | 7.8 | Programação reativa |
+| [TypeScript](https://www.typescriptlang.org) | 5.6 | Tipagem estática |
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+FormularioCadastroAngular/
+├── src/
+│   ├── app/               # Componentes, serviços e módulos
+│   ├── styles.scss        # Estilos globais
+│   ├── index.html
+│   └── main.ts
+├── public/                # Assets estáticos
+├── angular.json           # Configurações do Angular CLI
+├── package.json
+└── tsconfig.json
+```
+
+---
+
+## ⚙️ Pré-requisitos
+
+- [Node.js](https://nodejs.org) v18 ou superior
+- [Angular CLI](https://angular.dev/tools/cli) v19
+
+```bash
+npm install -g @angular/cli
+```
+
+---
+
+## 🛠️ Instalação
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/Chris7ianp/FormularioCadastroAngular.git
+cd FormularioCadastroAngular
+npm install
+```
+
+> Caso ocorra conflito de dependências:
+> ```bash
+> npm install --legacy-peer-deps
+> ```
+
+---
+
+## ▶️ Rodando o projeto
+
+### Desenvolvimento
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse em [http://localhost:4200](http://localhost:4200). A aplicação recarrega automaticamente ao salvar arquivos.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Build de produção
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os artefatos são gerados em `dist/crud-angular-material/`.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🧪 Testes
+
+### Unitários (Karma + Jasmine)
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### End-to-End
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+> O Angular CLI não inclui framework e2e por padrão. Configure o de sua preferência (ex: Cypress, Playwright).
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🧩 Funcionalidades
+
+- ✅ Formulário de cadastro com validação
+- ✅ Máscaras de input (CPF, telefone, etc.) via `ngx-mask`
+- ✅ IDs únicos por registro gerados com `uuid`
+- ✅ Interface responsiva com Angular Flex Layout
+- ✅ Componentes de UI com Angular Material (tema Indigo/Pink)
+- ✅ Operações CRUD completas
+
+---
+
+## 📦 Scripts disponíveis
+
+| Comando | Descrição |
+|---|---|
+| `npm start` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm run watch` | Build contínuo em modo desenvolvimento |
+| `npm test` | Executa os testes unitários |
+
+---
+
+## 📄 Licença
+
+Projeto privado. Todos os direitos reservados.
+
+---
+
+Desenvolvido por [Chris7ianp](https://github.com/Chris7ianp) 🚀
