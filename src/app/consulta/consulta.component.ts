@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -11,6 +11,7 @@ import { Cliente } from '../cadastro/cliente';
 import { ClienteService } from '../cliente.service';
 import { MatTableModule } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -30,6 +31,8 @@ import { Router } from '@angular/router';
   styleUrl: './consulta.component.scss'
 })
 export class ConsultaComponent implements OnInit {
+
+snack: MatSnackBar = inject(MatSnackBar)
 
   nomeBusca: string = ''; 
 
@@ -65,6 +68,11 @@ export class ConsultaComponent implements OnInit {
   deletar(cliente:Cliente){
     this.service.deletar(cliente);
     this.listaClientes = this.service.pesquisarClientes('');
+     this.mostrarMensagem('Deletado com sucesso!')
+  }
+
+  mostrarMensagem(mensagem: string){
+    this.snack.open(mensagem, "Ok")
   }
 
 }
